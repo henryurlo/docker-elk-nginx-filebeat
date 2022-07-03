@@ -1,8 +1,10 @@
 filebeat.inputs:
 - type: log
   enabled: true
+  tags: ["fix"]
   paths:
     - /var/log/nginx/*.log
+    - /var/log/mylog/*.log
 
 output.logstash:
   enabled: true
